@@ -1,9 +1,13 @@
 import React from 'react'
 import "./Home.scss"
+import HeroBanner from './heroBanner/HeroBanner'
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className='homePage'>
+      <HeroBanner/>
+    </div>
   )
 }
+
 
 export default Home

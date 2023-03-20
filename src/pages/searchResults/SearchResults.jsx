@@ -1,6 +1,7 @@
 import React from 'react'
 import "./SearchResults.scss"
-function SearchResults() {
+
+const SearchResults = () => {
   return (
     <div>SearchResults</div>
   )

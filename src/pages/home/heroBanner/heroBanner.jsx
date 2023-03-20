@@ -1,5 +1,5 @@
 import React from 'react'
-import "./heroBanner.scss"
+import "./HeroBanner.scss"
 const heroBanner = () => {
   return (
     <div>heroBanner</div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Detail.scss"
-function Details() {
+const Details = () => {
   return (
     <div>Details</div>
   )

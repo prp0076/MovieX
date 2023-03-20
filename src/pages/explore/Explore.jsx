@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Explore.scss"
-function Explore() {
+
+const Explore = () => {
   return (
     <div>Explore</div>
   )
