@@ -1,6 +1,6 @@
 import React from 'react'
 import "./heroBanner.scss"
-function heroBanner() {
+const heroBanner = () => {
   return (
     <div>heroBanner</div>
   )
