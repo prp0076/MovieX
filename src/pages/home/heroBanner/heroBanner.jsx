@@ -35,11 +35,13 @@ useEffect(() => {
     <div className="herobanner">
       {/*  backdrop img is rendered when loading state is false */}
       {!loading && <div className="backdrop-img">
-       <img src={background} alt="" />
+       <Img src={background}  />
       </div>}
+      <div className="opacity-layer">
 
+      </div>
      <ContentWrapper>
-      <div className="wrapper">
+      
           <div className="herobannerContent">
               <span className="title">Welcome.</span>
               <span className="subTitle">Millions of movies, TV shows and people to discover. Explore now</span>
@@ -53,7 +55,7 @@ useEffect(() => {
               </div>
 
           </div>
-        </div>
+        
      </ContentWrapper>
      
     </div>
