@@ -21,6 +21,18 @@ const Carousel = ({data,loading}) => {
     const navigation = (direction) =>{
      
     }
+    // loading skeleton method
+    const skItem = () =>{
+        return (
+            <div className="skeletonItem ">
+                <div className="posterBlock skeleton"></div>
+                <div className="textBlock">
+                    <div className="title  skeleton"></div>
+                    <div className="data  skeleton"></div>
+                </div>
+            </div>
+        )
+    }
   return (
     <div className="carousel">
         <ContentWrapper>
@@ -35,12 +47,26 @@ const Carousel = ({data,loading}) => {
                             <div className="posterBlock">
                                 <Img src={posterurl}/>
                             </div>
+                            <div className="textBlock">
+                                <span className="title">
+                                    {item.title || item.name}
+                                </span>
+                                <span className="date">
+                                    {dayjs(item.release_date).format("MMM D, YYYY")}
+                                </span>
+                            </div>
                         </div>
                     )
                 })}
               </div>
             ) : (
-                <span>loading...</span>
+                <div className="loadingSkeleton">
+                    {skItem()}
+                    {skItem()}
+                    {skItem()}
+                    {skItem()}
+                    {skItem()}
+                </div>
             )}
         </ContentWrapper>
     </div>
