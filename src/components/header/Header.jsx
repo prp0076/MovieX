@@ -15,7 +15,13 @@ const Header = () => {
   const [showSearch , setShowSearch]=useState("");
   const navigate = useNavigate();
   const location = useLocation();
- 
+
+  //location
+ //jab bhi page change krege to scroll location same hi rhega page load hone pr top se start ho the write a logic
+ useEffect(()=>{
+  window.scrollTo(0,0);
+ },[location])
+  // navbar controls
   const conrtolNavbar =()=>{
     console.log(window.scrollY)
     if(window.scrollY>200){
