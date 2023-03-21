@@ -24,8 +24,8 @@ const Carousel = ({data,loading}) => {
   return (
     <div className="carousel">
         <ContentWrapper>
-            <BsFillArrowLeftCircleFill className="carouselLeftNav"  onClick={()=>navigation("left")}/>
-            <BsFillArrowRightCircleFill className="carouselRighttNav" onClick={()=>navigation("right")}/>
+            <BsFillArrowLeftCircleFill className="carouselLeftNav arrow"  onClick={()=>navigation("left")}/>
+            <BsFillArrowRightCircleFill className="carouselRighttNav arrow" onClick={()=>navigation("right")}/>
             {!loading ?(
               <div className="carouselItems">
                 {data?.map((item)=>{
