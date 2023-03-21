@@ -1,4 +1,5 @@
 import React ,{useState}from 'react'
+import Carousel from '../../../components/Carousel/Carousel'
 import ContentWrapper from '../../../components/contentWrapper/ContentWrapper'
 import Switchtabs from '../../../components/switchtabs/Switchtabs'
 import useFetch from "../../../hooks/usefetch"
@@ -18,6 +19,7 @@ const Trending = () => {
             <Switchtabs data={["Day","Week"]} onTabChange={onTabChange}/>
         </ContentWrapper>
         {/* carousel section */}
+        <Carousel data={data?.results} loading={loading}/>
     </div>
   )
 }
