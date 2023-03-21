@@ -68,6 +68,9 @@
         @include md {
             display: none;
         }
+        @include sm {
+            display: none;
+        }
         svg {
             font-size: 18px;
             color: white;
