@@ -28,7 +28,7 @@ const  { url } =useSelector((state)=>state.home);
  }
   return (
     <BrowserRouter>
-    <Header/>
+    {/* <Header/> */}
     <Routes>
       <Route  path="/" element={<Home/>}/>
       <Route path="/:mediaType.:id" element={<Details/>}/>
@@ -36,7 +36,7 @@ const  { url } =useSelector((state)=>state.home);
       <Route path="/explore/:mediaType" element={<Explore/>}/>
       <Route path="*" element={<PageNotFound/>}/>
      </Routes>
-     <Footer/>
+     {/* <Footer/> */}
     </BrowserRouter>
   );
 }
