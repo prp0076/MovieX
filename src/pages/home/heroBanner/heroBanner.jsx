@@ -1,11 +1,13 @@
 import React,{useState} from 'react'
 import "./HeroBanner.scss"
 import { useNavigate } from 'react-router-dom';
+import useFetch from '../../../hooks/usefetch';
 const HeroBanner = () => {
  const [background, setBackground] = useState("");
  const [query, setQuery] = useState("");
 //  when user click on button it redirect to search page
 const navigate = useNavigate();
+const {data , loading}=useFetch("/movie/upcoming");
  const searchQueryHandle = (e) =>{
   if(e.key === "Enter" && query.length > 0){
    navigate(`/search/${query}`)
