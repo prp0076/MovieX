@@ -4,7 +4,7 @@ import Switchtabs from '../../../components/switchtabs/Switchtabs'
 import useFetch from "../../../hooks/usefetch"
 const Trending = () => {
     const[endpoint,setEndpoint]=useState("day");
-    const [data,loading]=useFetch(`/trending/all/${endpoint}`);
+    const {data,loading}=useFetch(`/trending/all/${endpoint}`);
     //api call when tab chages
     const onTabChange =(tab)=>{
      setEndpoint(tab === "Day"?"day":"week");
