@@ -15,8 +15,29 @@ const Header = () => {
   const [showSearch , setShowSearch]=useState("");
   const navigate = useNavigate();
   const location = useLocation();
-
-
+ 
+  const conrtolNavbar =()=>{
+    console.log(window.scrollY)
+    if(window.scrollY>200){
+      if(window.scrollY > lastScrollY  && !mobileMenu){
+        setShow("hide")
+      }
+      else{
+        setShow("show")
+      }
+    }
+    else{
+      setShow("top");
+    }
+    setLastScrollY(window.scrollY)
+  }
+  useEffect(()=>{
+    window.addEventListener("scroll",conrtolNavbar);
+    return ()=>{
+      window.removeEventListener("scroll",conrtolNavbar);
+    }
+  },[lastScrollY]);
+  
   //mobile menu
   const opensearch = () =>{
     setMobileMenu(false)
@@ -45,6 +66,8 @@ const Header = () => {
     }
     setMobileMenu(false)
   }
+
+
   return (
     <header className={`header ${mobileMenu ? "mobileView" :""} ${show}` }>
       <ContentWrapper>
