@@ -33,14 +33,14 @@
             height: 50px;
         }
     }
-    .menu-items {
+    .menuItems {
         list-style-type: none;
         display: none;
         align-items: center;
         @include md {
             display: flex;
         }
-        .menuitem {
+        .menuItem {
             height: 60px;
             display: flex;
             align-items: center;
@@ -68,9 +68,9 @@
         @include md {
             display: none;
         }
-        @include sm {
-            display: none;
-        }
+        // @include sm {
+        //     display: none;
+        // }
         svg {
             font-size: 18px;
             color: white;
