@@ -16,13 +16,20 @@ const  { url } =useSelector((state)=>state.home);
 
  useEffect(
   ()=>{
-    apitesting();
+    fetchapiconfig();
   }
  ,[])
- const apitesting = () =>{
-  fetchDataFromApi("/movie/popular")
+ const fetchapiconfig = () =>{
+  fetchDataFromApi("/configuration")
   .then((res) =>{
-       dispatch(getApiConfiguration(res))
+      // console.log(res)
+       const urlimg ={
+        backdrop: res.data.images.secure_base_url + "original",
+        poster: res.data.images.secure_base_url + "original",
+        profile: res.data.images.secure_base_url + "original",
+       }
+      //  console.log(urlimg)
+       dispatch(getApiConfiguration(urlimg))
     }
   )
  }
