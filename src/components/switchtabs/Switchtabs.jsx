@@ -1,8 +1,19 @@
-import React from 'react'
+import React,{useState} from 'react'
 import "./Switchtabs.scss"
-const Switchtabs = () => {
+const Switchtabs = ({data, onTabChange}) => {
+ const[selectiveTab,setselectiveTab]=useState(0);
+ const [left ,setLeft]=useState(0);
   return (
-    <div>Switchtabs</div>
+    <div className='switchingTabs'>
+        <div className="tabItems">
+            {data.map((tab,index)=>(
+             <span key={index} className={`tabItem`}>
+                {tab}
+             </span>
+            ))}
+            <span className="movieBg" style={{left}}></span>
+        </div>
+    </div>
   )
 }
 
