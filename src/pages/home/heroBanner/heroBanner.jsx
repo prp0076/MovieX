@@ -18,8 +18,8 @@ const { url } = useSelector((state) =>state.home);
 //backdrop path
 useEffect(() => {
     const bg =  url.backdrop+ data?.data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
-    console.log(url);
-    console.log(bg)
+    // console.log(url);
+    // console.log(bg)
     setBackground(bg);
   },[data]);
 

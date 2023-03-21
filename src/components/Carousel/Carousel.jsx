@@ -13,8 +13,37 @@ import PosterFallback from "../../assets/no-poster.png";
 
 import "./Carousel.scss"
 const Carousel = ({data,loading}) => {
+    //refrence
+    const carouselConatiner = useRef();
+    const {url}=useSelector((state)=>state.home);
+    const navigate = useNavigate();
+    // navigation for left and right scroll
+    const navigation = (direction) =>{
+     
+    }
   return (
-    <div>Carousel</div>
+    <div className="carousel">
+        <ContentWrapper>
+            <BsFillArrowLeftCircleFill className="carouselLeftNav"  onClick={()=>navigation("left")}/>
+            <BsFillArrowRightCircleFill className="carouselRighttNav" onClick={()=>navigation("right")}/>
+            {!loading ?(
+              <div className="carouselItems">
+                {data?.map((item)=>{
+                    const posterurl=item.poster_path ? url.poster + item.poster_path : PosterFallback
+                    return (
+                        <div key={item.id}  className="carouselItem">
+                            <div className="posterBlock">
+                                <Img src={posterurl}/>
+                            </div>
+                        </div>
+                    )
+                })}
+              </div>
+            ) : (
+                <span>loading...</span>
+            )}
+        </ContentWrapper>
+    </div>
   )
 }
 
