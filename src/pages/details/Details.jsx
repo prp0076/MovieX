@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Detail.scss"
 import {useParams} from "react-router-dom"
-import useFetch from "../../hooks/usefetch"
+import useFetch from "../../hooks/useFetch"
 import DetailsBanner from './detailsBanner/DetailsBanner'
 const Details = () => {
   //api call for details
