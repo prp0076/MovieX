@@ -8,13 +8,15 @@ import "./DetailsBanner.scss";
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 import useFetch from "../../../hooks/useFetch";
 import Genres from "../../../components/genres/Genres";
-import CircleRating from "../../../components/circleRating/CircleRating";
-import Img from "../../../components/lazyLoadImage/Img.jsx";
+import CircleRating from "../../../components/circlerating/CircleRating";
+import Img from "../../../components/lazyloadimage/Img";
 import PosterFallback from "../../../assets/no-poster.png";
 
 const DetailsBanner = ({ video, crew }) => {
     const {mediaType,id}=useParams();
-    const {data,loading}=useFetch(`/${mediaType}/${id}`)
+    
+    const {data,loading}=useFetch(`/movie/${id}`);
+
     const toHoursAndMinutes = (totalMinutes) => {
         const hours = Math.floor(totalMinutes / 60);
         const minutes = totalMinutes % 60;
