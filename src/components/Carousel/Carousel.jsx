@@ -12,7 +12,7 @@ import Img from "../lazyloadimage/Img";
 import PosterFallback from "../../assets/no-poster.png";
 import CircleRating from "../circlerating/CircleRating";
 import "./Carousel.scss";
-const Carousel = ({data,loading}) => {
+const Carousel = ({data,loading,endpoint}) => {
     //refrence
     const carouselConatiner = useRef();
     const {url}=useSelector((state)=>state.home);
@@ -49,7 +49,7 @@ const Carousel = ({data,loading}) => {
                     
                     const posterurl=item.poster_path ? url.poster + item.poster_path : PosterFallback
                     return (
-                        <div key={item.id}  className="carouselItem" onClick={()=>navigate(`/${item.media_type}/${item.id}`)}>
+                        <div key={item.id}  className="carouselItem" onClick={()=>navigate(`/${item.media_type || endpoint}/${item.id}`)}>
                             <div className="posterBlock">
                                 <Img src={posterurl}/>
                                 <CircleRating rating={item.vote_average.toFixed(1)}/>
