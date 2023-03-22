@@ -23,14 +23,15 @@ const DetailsBanner = ({ video, crew }) => {
     const url = useSelector((state)=>state.home);
     // genres
     const _genres=data?.data?.genres.map((g)=>g.id);
-    console.log(_genres)
+    // console.log(_genres)
+    // varible for crew and writers
     
     const toHoursAndMinutes = (totalMinutes) => {
         const hours = Math.floor(totalMinutes / 60);
         const minutes = totalMinutes % 60;
         return `${hours}h${minutes > 0 ? ` ${minutes}m` : ""}`;
     };
-    console.log(data);
+    // console.log(data);
     return (
         <div className="detailsBanner">
             {!loading ? (

@@ -8,11 +8,12 @@ const Details = () => {
   const {mediaType,id}=useParams();
   const {data,loading}=useFetch(`/${mediaType}/${id}/videos`)
   const {data:credits,loading:creditsloading}=useFetch(`/${mediaType}/${id}/credits`)
-
+  console.log(data?.data?.results[0])
+  console.log(credits?.credits?.crew)
 
   return (
     <div>
-      <DetailsBanner/>
+      <DetailsBanner video={data?.data?.results[0]} crew={credits?.credits?.crew}/>
     </div>
   )
 }
