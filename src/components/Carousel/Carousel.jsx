@@ -19,7 +19,12 @@ const Carousel = ({data,loading}) => {
     const navigate = useNavigate();
     // navigation for left and right scroll
     const navigation = (direction) =>{
-     
+     const container = carouselConatiner.current;
+     const scrollAmount = direction === "left" ? container.scrollLeft - (container.offsetWidth + 20):container.scrollLeft + (container.offsetWidth + 20);
+     container.scrollTo({
+        left:scrollAmount,
+        behavior:"smooth"
+     });
     }
     // loading skeleton method
     const skItem = () =>{
@@ -39,16 +44,16 @@ const Carousel = ({data,loading}) => {
             <BsFillArrowLeftCircleFill className="carouselLeftNav arrow"  onClick={()=>navigation("left")}/>
             <BsFillArrowRightCircleFill className="carouselRighttNav arrow" onClick={()=>navigation("right")}/>
             {!loading ?(
-              <div className="carouselItems">
+              <div className="carouselItems" ref={carouselConatiner}>
                 {data?.map((item)=>{
                     
                     const posterurl=item.poster_path ? url.poster + item.poster_path : PosterFallback
                     return (
-                        <div key={item.id}  className="carouselItem">
+                        <div key={item.id}  className="carouselItem" onClick={()=>navigate(`/${item.media_type}/${item.id}`)}>
                             <div className="posterBlock">
                                 <Img src={posterurl}/>
                                 <CircleRating rating={item.vote_average.toFixed(1)}/>
-                                <Genres data={item.genre_ids}/>
+                                <Genres data={item.genre_ids.slice(0,2)}/>
                             </div>
                             <div className="textBlock">
                                 <span className="title">
