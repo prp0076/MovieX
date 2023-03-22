@@ -25,7 +25,11 @@ const DetailsBanner = ({ video, crew }) => {
     const _genres=data?.data?.genres.map((g)=>g.id);
     // console.log(_genres)
     // varible for crew and writers
-    
+    // console.log(crew)
+    const director = crew?.filter((f)=>f.job === "Director");
+    // console.log(director)
+    const writter = crew?.filter((f)=> f.job==="Screenplay" || f.job ==="Story" || f.job==="Writter");
+    // console.log(writter)
     const toHoursAndMinutes = (totalMinutes) => {
         const hours = Math.floor(totalMinutes / 60);
         const minutes = totalMinutes % 60;
@@ -115,6 +119,52 @@ const DetailsBanner = ({ video, crew }) => {
                                         </div>
                                     )}
                                 </div>
+                                {director?.length>0&&(
+                                    <div className="info">
+                                        <span className="text bold">
+                                            Director:{" "}
+                                        </span>
+                                        <span className="text">
+                                            {director.map((d,i)=>(
+                                                <span key={i}>
+                                                    {d.name}
+                                                    {director?.length-1 !== i && ", "}
+                                                </span>
+                                            ))}
+                                        </span>
+                                    </div>
+                                )}
+
+                                {writter?.length>0&&(
+                                    <div className="info">
+                                        <span className="text bold">
+                                            Writter:{" "}
+                                        </span>
+                                        <span className="text">
+                                            {writter.map((d,i)=>(
+                                                <span key={i}>
+                                                    {d.name}
+                                                    {writter?.length-1 !== i && ", "}
+                                                </span>
+                                            ))}
+                                        </span>
+                                    </div>
+                                )}
+                                {/* {crew?.created_by?.length>0&&(
+                                    <div className="info">
+                                        <span className="text bold">
+                                            Creator:{" "}
+                                        </span>
+                                        <span className="text">
+                                            {data?.data?.created_by.map((d,i)=>(
+                                                <span key={i}>
+                                                    {d.name}
+                                                    {data?.data?.created_by?.length-1 !== i && ", "}
+                                                </span>
+                                            ))}
+                                        </span>
+                                    </div>
+                                )} */}
                             </div>
                         </div>
                     </ContentWrapper>
