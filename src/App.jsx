@@ -38,18 +38,22 @@ const  { url } =useSelector((state)=>state.home);
  //genres
  const genresCall= async()=>{
    let promises =[]
-   //we have two api methods in promises movie and tv
+   //we have two api call methods in promises movie and tv
    let endpoints =["tv","movie"]
    let allGenres ={}
+
    endpoints.forEach((url)=>{
     promises.push(fetchDataFromApi(`/genre/${url}/list`))
    })
 
    const data = await Promise.all(promises);
    console.log(data)
+   console.log(data[0].data.genres)
    data.map(({genres})=>{
-    return genres.map((item) =>{allGenres[item.id]})
+    return data[0].data.genres.map((item) =>(allGenres[item.id]=item))
+    console.log(genres);
    })
+
  }
   return (
     <BrowserRouter>
