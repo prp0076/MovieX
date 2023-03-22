@@ -6,7 +6,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
-
+import Genres from "../genres/Genres"
 import ContentWrapper from "../contentWrapper/ContentWrapper";
 import Img from "../lazyloadimage/Img";
 import PosterFallback from "../../assets/no-poster.png";
@@ -41,12 +41,14 @@ const Carousel = ({data,loading}) => {
             {!loading ?(
               <div className="carouselItems">
                 {data?.map((item)=>{
+                    
                     const posterurl=item.poster_path ? url.poster + item.poster_path : PosterFallback
                     return (
                         <div key={item.id}  className="carouselItem">
                             <div className="posterBlock">
                                 <Img src={posterurl}/>
                                 <CircleRating rating={item.vote_average.toFixed(1)}/>
+                                <Genres data={item.genre_ids}/>
                             </div>
                             <div className="textBlock">
                                 <span className="title">
