@@ -1,7 +1,7 @@
 import React,{useEffect } from "react";
 import  {fetchDataFromApi}  from "./utils/api";
 import { useSelector, useDispatch } from 'react-redux'
-import { getApiConfiguration } from "./store/homeSlice"
+import { getApiConfiguration ,getGenres} from "./store/homeSlice"
 import { BrowserRouter,Route,Routes} from "react-router-dom";
 import Header from "./components/header/Header"
 import Footer from "./components/footer/Footer"
@@ -47,13 +47,21 @@ const  { url } =useSelector((state)=>state.home);
    })
 
    const data = await Promise.all(promises);
-   console.log(data)
-   console.log(data[0].data.genres)
-   data.map(({genres})=>{
-    return data[0].data.genres.map((item) =>(allGenres[item.id]=item))
-    console.log(genres);
+   const data1 = data[0].data;
+   const data2 = data[1].data;
+   const final_data =[data1,data2];
+  //  console.log(final_data)
+  //  console.log(final_data[0]);
+  //  console.log(final_data[1]);
+   final_data.map(({genres})=>{
+    return genres.map((item) =>(allGenres[item.id]=item))
+    
    })
+  //  console.log(allGenres)
 
+  //save in state
+  dispatch(getGenres(allGenres));
+  
  }
   return (
     <BrowserRouter>
