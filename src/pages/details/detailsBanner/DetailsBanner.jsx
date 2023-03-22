@@ -103,6 +103,16 @@ const DetailsBanner = ({ video, crew }) => {
                                             </span>
                                         </div>
                                     )}
+                                    {data.data.runtime && (
+                                        <div className="infoItem">
+                                            <span className="text bold">
+                                               Runtime :{" "}
+                                            </span>
+                                            <span className="text">
+                                                {toHoursAndMinutes(data?.data?.runtime)}
+                                            </span>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </div>
