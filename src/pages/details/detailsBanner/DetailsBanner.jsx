@@ -88,7 +88,7 @@ const DetailsBanner = ({ video, crew }) => {
                                     </div>
                                 </div>
                                 <div className="info">
-                                    {data.data.status && (
+                                    {data?.data?.status && (
                                         <div className="infoItem">
                                             <span className="text bold">
                                                 Status :{" "}
@@ -98,7 +98,7 @@ const DetailsBanner = ({ video, crew }) => {
                                             </span>
                                         </div>
                                     )}
-                                    {data.data.release_date && (
+                                    {data?.data?.release_date && (
                                         <div className="infoItem">
                                             <span className="text bold">
                                                Release Date :{" "}
@@ -108,7 +108,7 @@ const DetailsBanner = ({ video, crew }) => {
                                             </span>
                                         </div>
                                     )}
-                                    {data.data.runtime && (
+                                    {data?.data?.runtime && (
                                         <div className="infoItem">
                                             <span className="text bold">
                                                Runtime :{" "}
