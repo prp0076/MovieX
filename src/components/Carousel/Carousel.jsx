@@ -11,7 +11,7 @@ import ContentWrapper from "../contentWrapper/ContentWrapper";
 import Img from "../lazyloadimage/Img";
 import PosterFallback from "../../assets/no-poster.png";
 import CircleRating from "../circlerating/CircleRating";
-import "./Carousel.scss"
+import "./Carousel.scss";
 const Carousel = ({data,loading}) => {
     //refrence
     const carouselConatiner = useRef();
