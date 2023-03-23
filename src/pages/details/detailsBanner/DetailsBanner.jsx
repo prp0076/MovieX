@@ -83,8 +83,9 @@ const [videoid , setVideoId]=useState(null)
                                     
                                     <div className="playbtn" onClick={()=>{
                                         setShow(true);
-                                        
-                                        setVideoId(video.key);
+                                        const trailer = video?.filter((item) => item?.type === "Trailer");
+                                         
+                                        setVideoId(trailer[0].key);
                                     }}>
                                         <PlayIcon />
                                         <span className="text">
