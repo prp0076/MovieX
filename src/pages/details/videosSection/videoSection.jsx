@@ -19,14 +19,27 @@ const VideosSection = ({ data, loading }) => {
             </div>
         );
     };
-
+    
     return (
         <div className="videosSection">
             <ContentWrapper>
                 <div className="sectionHeading">Official Videos</div>
                 {!loading ? (
+                    
                     <div className="videos">
-                        Videos data...
+                        {data?.results?.map((video)=>{
+                            console.log(video.id,video.key);
+                            <div key={video.id} className="videoItem" onClick={()=>{
+                            setVideoId(video.key);
+                            setShow(true);
+                            }}>
+                            <div className="videoThumbnail">
+                                <Img src={`https://img.youtube.com/vi/${video.key}.jpg`}/>
+                                <PlayIcon/>
+                                </div>    
+
+                            </div>
+                        })}
                     </div>
                 ) : (
                     <div className="videoSkeleton">

@@ -14,13 +14,13 @@ const Details = () => {
   // console.log(data?.data?.results[0])
   // console.log(credits?.data?.cast)
   // console.log(loading)
-  console.log(data)
+  // console.log(data?.data);
 
   return (
     <div>
       <DetailsBanner video={data?.data?.results[0]} crew={credits?.data?.crew}/>
       <Cast data={credits?.data?.cast} loading={creditsloading}/>
-      <VideosSection data={credits?.data} loading={loading}/>
+      <VideosSection data={data?.data} loading={loading}/>
     </div>
   )
 }

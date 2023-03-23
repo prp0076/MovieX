@@ -43,7 +43,7 @@ const [videoid , setVideoId]=useState(null)
         return `${hours}h${minutes > 0 ? ` ${minutes}m` : ""}`;
     };
 
-
+   console.log(video?.key);
     return (
         <div className="detailsBanner">
             {!loading ? (
@@ -79,8 +79,10 @@ const [videoid , setVideoId]=useState(null)
                                 <div className="row">
                                     <CircleRating rating={data?.data?.vote_average.toFixed(1)}/>
                                     {/* playbtn */}
+                                    
                                     <div className="playbtn" onClick={()=>{
                                         setShow(true);
+                                        
                                         setVideoId(video?.key);
                                     }}>
                                         <PlayIcon />
