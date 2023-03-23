@@ -11,16 +11,16 @@ const Details = () => {
   const {mediaType,id}=useParams();
   const {data,loading}=useFetch(`/${mediaType}/${id}/videos`)
   const {data:credits,loading:creditsloading}=useFetch(`/${mediaType}/${id}/credits`)
-  // console.log(data?.data?.results[0])
+  // console.log(data?.data?.results)
   // console.log(credits?.data?.cast)
   // console.log(loading)
-  
+  console.log(data);
 
   return (
     <div>
       <DetailsBanner video={data?.data?.results} crew={credits?.data?.crew}/>
       <Cast data={credits?.data?.cast} loading={creditsloading}/>
-      <VideosSection data={data?.data} loading={loading}/>
+      <VideosSection data={data?.data?.results} loading={loading}/>
     </div>
   )
 }
