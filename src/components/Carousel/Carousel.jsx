@@ -12,7 +12,7 @@ import Img from "../lazyloadimage/Img";
 import PosterFallback from "../../assets/no-poster.png";
 import CircleRating from "../circlerating/CircleRating";
 import "./Carousel.scss";
-const Carousel = ({data,loading,endpoint}) => {
+const Carousel = ({data,loading,endpoint,title}) => {
     //refrence
     const carouselConatiner = useRef();
     const {url}=useSelector((state)=>state.home);
@@ -41,6 +41,7 @@ const Carousel = ({data,loading,endpoint}) => {
   return (
     <div className="carousel">
         <ContentWrapper>
+            {title && <div className="carouselTitle">{title}</div>}
             <BsFillArrowLeftCircleFill className="carouselLeftNav arrow"  onClick={()=>navigation("left")}/>
             <BsFillArrowRightCircleFill className="carouselRighttNav arrow" onClick={()=>navigation("right")}/>
             {!loading ?(

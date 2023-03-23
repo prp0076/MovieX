@@ -20,7 +20,7 @@ const VideosSection = ({ data, loading }) => {
         );
     };
     // console.log(data?.results)
-    console.log(data);
+    // console.log(data);
     return (
         <div className="videosSection">
             <ContentWrapper>
