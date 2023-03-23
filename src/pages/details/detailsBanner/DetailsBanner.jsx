@@ -12,9 +12,14 @@ import CircleRating from "../../../components/circlerating/CircleRating";
 import Img from "../../../components/lazyloadimage/Img";
 import PosterFallback from "../../../assets/no-poster.png";
 import { PlayIcon } from "./Playbtn";
+import VideoPopup from "../../../components/videoPopup/videoPopup";
 
 
 const DetailsBanner = ({ video, crew }) => {
+
+const [show, setShow]=useState(false)
+const [videoid , setVideoId]=useState(null)
+
     const {mediaType,id}=useParams();
     
     const {data,loading}=useFetch(`/movie/${id}`);
@@ -36,6 +41,8 @@ const DetailsBanner = ({ video, crew }) => {
         const minutes = totalMinutes % 60;
         return `${hours}h${minutes > 0 ? ` ${minutes}m` : ""}`;
     };
+
+
     return (
         <div className="detailsBanner">
             {!loading ? (
@@ -167,7 +174,9 @@ const DetailsBanner = ({ video, crew }) => {
                                 )} */}
                             </div>
                         </div>
+                        <VideoPopup show={show} setShow={setShow} videoId={videoid} setVideoId={setVideoId}/>
                     </ContentWrapper>
+
                </React.Fragment>)}
                </>
             ) : (
