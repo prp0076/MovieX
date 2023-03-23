@@ -30,12 +30,12 @@ const DetailsBanner = ({ video, crew }) => {
     // console.log(director)
     const writter = crew?.filter((f)=> f.job==="Screenplay" || f.job ==="Story" || f.job==="Writter");
     // console.log(writter)
+    console.log(data);
     const toHoursAndMinutes = (totalMinutes) => {
         const hours = Math.floor(totalMinutes / 60);
         const minutes = totalMinutes % 60;
         return `${hours}h${minutes > 0 ? ` ${minutes}m` : ""}`;
     };
-    // console.log(data);
     return (
         <div className="detailsBanner">
             {!loading ? (
