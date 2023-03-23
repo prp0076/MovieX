@@ -17,6 +17,7 @@ import VideoPopup from "../../../components/videoPopup/videoPopup";
 
 const DetailsBanner = ({ video, crew }) => {
 
+
 const [show, setShow]=useState(false)
 const [videoid , setVideoId]=useState(null)
 
@@ -31,7 +32,7 @@ const [videoid , setVideoId]=useState(null)
     // console.log(_genres)
     // varible for crew and writers
     // console.log(crew)
-    // console.log(video.key);
+    // console.log(console.log(video);key);
     const director = crew?.filter((f)=>f.job === "Director");
     // console.log(director)
     const writter = crew?.filter((f)=> f.job==="Screenplay" || f.job ==="Story" || f.job==="Writter");
@@ -42,7 +43,7 @@ const [videoid , setVideoId]=useState(null)
         const minutes = totalMinutes % 60;
         return `${hours}h${minutes > 0 ? ` ${minutes}m` : ""}`;
     };
-
+    
 //    console.log(video?.key);
     return (
         <div className="detailsBanner">
@@ -83,7 +84,7 @@ const [videoid , setVideoId]=useState(null)
                                     <div className="playbtn" onClick={()=>{
                                         setShow(true);
                                         
-                                        setVideoId(video?.key);
+                                        setVideoId(video.key);
                                     }}>
                                         <PlayIcon />
                                         <span className="text">
