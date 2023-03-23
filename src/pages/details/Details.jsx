@@ -17,7 +17,7 @@ const Details = () => {
   return (
     <div>
       <DetailsBanner video={data?.data?.results[0]} crew={credits?.data?.crew}/>
-      <Cast/>
+      <Cast />
     </div>
   )
 }
