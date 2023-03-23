@@ -31,11 +31,12 @@ const [videoid , setVideoId]=useState(null)
     // console.log(_genres)
     // varible for crew and writers
     // console.log(crew)
+    // console.log(video.key);
     const director = crew?.filter((f)=>f.job === "Director");
     // console.log(director)
     const writter = crew?.filter((f)=> f.job==="Screenplay" || f.job ==="Story" || f.job==="Writter");
     // console.log(writter)
-    console.log(data);
+    // console.log(data);
     const toHoursAndMinutes = (totalMinutes) => {
         const hours = Math.floor(totalMinutes / 60);
         const minutes = totalMinutes % 60;
@@ -78,8 +79,11 @@ const [videoid , setVideoId]=useState(null)
                                 <div className="row">
                                     <CircleRating rating={data?.data?.vote_average.toFixed(1)}/>
                                     {/* playbtn */}
-                                    <div className="playbtn" onClick={()=>{}}>
-                                        <PlayIcon/>
+                                    <div className="playbtn" onClick={()=>{
+                                        setShow(true);
+                                        setVideoId(video?.key);
+                                    }}>
+                                        <PlayIcon />
                                         <span className="text">
                                             Watch Trailer
                                         </span>
