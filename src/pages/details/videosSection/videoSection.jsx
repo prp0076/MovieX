@@ -19,7 +19,7 @@ const VideosSection = ({ data, loading }) => {
             </div>
         );
     };
-    
+    // console.log(data?.results)
     return (
         <div className="videosSection">
             <ContentWrapper>
@@ -28,7 +28,7 @@ const VideosSection = ({ data, loading }) => {
                     
                     <div className="videos">
                         {data?.results?.map((video)=>{
-                            console.log(video.id,video.key);
+                            // console.log(video.id,video.key);
                             <div key={video.id} className="videoItem" onClick={()=>{
                             setVideoId(video.key);
                             setShow(true);

@@ -43,7 +43,7 @@ const [videoid , setVideoId]=useState(null)
         return `${hours}h${minutes > 0 ? ` ${minutes}m` : ""}`;
     };
 
-   console.log(video?.key);
+//    console.log(video?.key);
     return (
         <div className="detailsBanner">
             {!loading ? (
