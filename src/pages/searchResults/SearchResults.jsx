@@ -14,6 +14,7 @@ const SearchResults = () => {
   const fetchInfiniteData =()=>{
     setLoading(true)
     fetchDataFromApi(`/search/multi?query=${query}&page=${pagenum}`).then((res)=>{
+      console.log(res);
       setData(res);
       setPageNum((prev)=>prev+1);
       setLoading(false);
