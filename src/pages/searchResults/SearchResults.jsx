@@ -20,7 +20,7 @@ const SearchResults = () => {
       setLoading(false);
     });
   }
-  console.log(data?.results);
+  
   const fetchNextPageData =()=>{
     fetchDataFromApi(`/search/multi?query=${query}&page=${pagenum}`).then((res)=>{
       if(data?.results){
@@ -37,15 +37,17 @@ const SearchResults = () => {
   useEffect(()=>{
     fetchInfiniteData();
   },[query])
+  
   return (
     <div className='searchResultsPage'>
       {loading && <Spinner initial={true}/>}
       {!loading && (
         <ContentWrapper>
-          {data?.results?.length >0 ? (
+          
+          {data?.results.length >0 ? (
             <>
             <div className="pageTitle">
-              {`Search ${data.total.results >1 ? "results" : "result"} of ${query}`}
+              {`Search ${data.total_results >1 ? "results" : "result"} of ${query}`}
             </div>
             </>
           ) :
