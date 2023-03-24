@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./SearchResults.scss"
 import InfiniteScroll from "react-infinite-scroll-component"
 import { useParams } from 'react-router-dom'
@@ -11,9 +11,25 @@ const SearchResults = () => {
   const [pagenum , setPageNum]=useState(1)
   const [loading , setLoading]=useState(false)
   const {query}=useParams();
+  const fetchInfiniteData =()=>{
+    setLoading(true)
+    fetchDataFromApi(`/search/multi?query=${query}&page=${pagenum}`).then((res)=>{
+      setData(res);
+      setPageNum((prev)=>prev+1);
+      setLoading(false);
+    });
+  }
+  // const fetchNextPageData =()=>{
+  //   fetchDataFromApi(`/search/multi?query=${query}&page=${pagenum}`).then((res)=>{
+      
+  //   });
+  // }
+  useEffect(()=>{
+    fetchInfiniteData();
+  },[query])
   return (
-    <div className='searchResults'>
-    
+    <div className='searchResultsPage'>
+      
     </div>
   )
 }
