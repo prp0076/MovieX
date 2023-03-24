@@ -6,7 +6,7 @@ import { fetchDataFromApi } from '../../utils/api'
 import ContentWrapper from '../../components/contentWrapper/ContentWrapper'
 import MovieCard from "../../components/moviecard/MovieCard"
 import Spinner from "../../components/spinner/Spinner"
-const SearchResults = () => {
+const SearchResults = () => { 
   const [data, setData]=useState(null);
   const [pagenum , setPageNum]=useState(1)
   const [loading , setLoading]=useState(false)
@@ -14,17 +14,26 @@ const SearchResults = () => {
   const fetchInfiniteData =()=>{
     setLoading(true)
     fetchDataFromApi(`/search/multi?query=${query}&page=${pagenum}`).then((res)=>{
-      console.log(res);
-      setData(res);
+      console.log(res?.data);
+      setData(res?.data);
       setPageNum((prev)=>prev+1);
       setLoading(false);
     });
   }
-  // const fetchNextPageData =()=>{
-  //   fetchDataFromApi(`/search/multi?query=${query}&page=${pagenum}`).then((res)=>{
-      
-  //   });
-  // }
+  console.log(data?.results);
+  const fetchNextPageData =()=>{
+    fetchDataFromApi(`/search/multi?query=${query}&page=${pagenum}`).then((res)=>{
+      if(data?.results){
+        setData({
+          ...data, results:[...data?.results,res?.data?.results]
+        })
+      }
+      else{
+        setData(res?.data)
+      }
+      setPageNum((prev)=>prev+1);
+    });
+  }
   useEffect(()=>{
     fetchInfiniteData();
   },[query])
