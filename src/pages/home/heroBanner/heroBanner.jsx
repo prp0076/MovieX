@@ -1,8 +1,8 @@
 import React,{useEffect, useState} from 'react'
-import "./HeroBanner.scss"
+import "./heroBanner.scss"
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import useFetch from '../../../hooks/useFetch';
+import useFetch from '../../../hooks/usefetch';
 import Img from '../../../components/lazyloadimage/Img';
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper"
 const HeroBanner = () => {
