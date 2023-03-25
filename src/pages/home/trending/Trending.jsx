@@ -8,7 +8,7 @@ const Trending = () => {
     const {data,loading}=useFetch(`/trending/all/${endpoint}`);
     //api call when tab chages
     const onTabChange =(tab)=>{
-     setEndpoint(tab === "Day"?"day":"week");
+     setEndpoint(tab === "Day" ? "day" : "week");
     }
     
     
