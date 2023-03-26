@@ -39,6 +39,7 @@ const Explore = () => {
     const fetchInitialData = () => {
         setLoading(true);
         fetchDataFromApi(`/discover/${mediaType}`, filters).then((res) => {
+          console.log(res);
             setData(res);
             setPageNum((prev) => prev + 1);
             setLoading(false);
@@ -95,7 +96,7 @@ const Explore = () => {
         setPageNum(1);
         fetchInitialData();
     };
-
+   console.log(data?.data?.results);
     return (
         <div className="explorePage">
             <ContentWrapper>
@@ -134,7 +135,7 @@ const Explore = () => {
                 {loading && <Spinner initial={true} />}
                 {!loading && (
                     <>
-                        {data?.results?.length > 0 ? (
+                        {data?.data?.results?.length > 0 ? (
                             <InfiniteScroll
                                 className="content"
                                 dataLength={data?.results?.length || []}
