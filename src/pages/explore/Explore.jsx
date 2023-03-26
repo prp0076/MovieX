@@ -35,11 +35,11 @@ const Explore = () => {
     const { mediaType } = useParams();
 
     const { data: genresData } = useFetch(`/genre/${mediaType}/list`);
-
+    console.log(genresData);
     const fetchInitialData = () => {
         setLoading(true);
         fetchDataFromApi(`/discover/${mediaType}`, filters).then((res) => {
-          console.log(res?.data);
+          // console.log(res?.data);
             setData(res?.data);
             setPageNum((prev) => prev + 1);
             setLoading(false);
@@ -51,6 +51,7 @@ const Explore = () => {
             `/discover/${mediaType}?page=${pageNum}`,
             filters
         ).then((res) => {
+          // {console.log(res)}
             if (data?.results) {
                 setData({
                   ...data, results:[...data?.results,res?.data?.results]
@@ -113,7 +114,7 @@ const Explore = () => {
                             name="genres"
                             value={genre}
                             closeMenuOnSelect={false}
-                            options={genresData?.genres}
+                            options={genresData?.data?.genres}
                             getOptionLabel={(option) => option.name}
                             getOptionValue={(option) => option.id}
                             onChange={onChange}
@@ -144,7 +145,7 @@ const Explore = () => {
                                 hasMore={pageNum <= data?.total_pages}
                                 loader={<Spinner />}
                             >
-                                {data?.data?.results?.map((item, index) => {
+                                {data?.results?.map((item, index) => {
                                     if (item.media_type === "person") return;
                                     return (
                                         <MovieCard
