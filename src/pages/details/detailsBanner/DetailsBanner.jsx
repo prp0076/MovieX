@@ -53,7 +53,8 @@ const [videoid , setVideoId]=useState(null)
                {!!data &&(
                 // console.log(url.url.backdrop+data.data.backdrop_path),
                <React.Fragment>
-                
+                    {console.log(url?.url?.backdrop)}
+                    {console.log(data?.data)}
                     <div className="backdrop-img">
                         <Img src={url?.url?.backdrop +data?.data?.backdrop_path}/>
                     </div>
