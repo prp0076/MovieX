@@ -31,7 +31,7 @@
 - React Router Dom
 
 ### Folder Structure
-
+```bash
 +---public
 +---src
 |   \---assests
@@ -69,7 +69,8 @@
 \---index.scss
 \---index.jsx
 
-
+---
+```
 ### Owner
 
 - Developer: Pushpraj Paroha 
