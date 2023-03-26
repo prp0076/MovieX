@@ -35,6 +35,7 @@ const SearchResults = () => {
     });
   }
   useEffect(()=>{
+    setPageNum(1);
     fetchInfiniteData();
   },[query])
   
