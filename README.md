@@ -76,16 +76,6 @@
 - GitHub URL: https://github.com/prp0076
 
 
-
-
-- Github generated page : [visit now]()
-
-
-
-
-
-### For more information please [visit website]()
-
 ## Screenshots
 
 
