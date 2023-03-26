@@ -35,7 +35,7 @@ const Explore = () => {
     const { mediaType } = useParams();
 
     const { data: genresData } = useFetch(`/genre/${mediaType}/list`);
-    console.log(genresData);
+    // console.log(genresData);
     const fetchInitialData = () => {
         setLoading(true);
         fetchDataFromApi(`/discover/${mediaType}`, filters).then((res) => {
@@ -96,9 +96,9 @@ const Explore = () => {
         setPageNum(1);
         fetchInitialData();
     };
-   console.log(data?.results);
-   console.log(data?.total_pages);
-   console.log(data?.results?.length);
+  //  console.log(data?.results);
+  //  console.log(data?.total_pages);
+  //  console.log(data?.results?.length);
     return (
         <div className="explorePage">
             <ContentWrapper>
