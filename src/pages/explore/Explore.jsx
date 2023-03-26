@@ -39,7 +39,7 @@ const Explore = () => {
     const fetchInitialData = () => {
         setLoading(true);
         fetchDataFromApi(`/discover/${mediaType}`, filters).then((res) => {
-          console.log(res);
+          console.log(res?.data);
             setData(res?.data);
             setPageNum((prev) => prev + 1);
             setLoading(false);
