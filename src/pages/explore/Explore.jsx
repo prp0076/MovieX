@@ -95,7 +95,7 @@ const Explore = () => {
         setPageNum(1);
         fetchInitialData();
     };
-   console.log(data?.data?.results);
+   console.log(data?.results);
     return (
         <div className="explorePage">
             <ContentWrapper>
@@ -134,12 +134,12 @@ const Explore = () => {
                 {loading && <Spinner initial={true} />}
                 {!loading && (
                     <>  
-                        {data?.data?.results?.length > 0 ? (
+                        {data?.results?.length > 0 ? (
                             <InfiniteScroll
                                 className="content"
-                                dataLength={data?.data?.results?.length || []}
+                                dataLength={data?.results?.length || []}
                                 next={fetchNextPageData}
-                                hasMore={pageNum <= data?.data?.total_pages}
+                                hasMore={pageNum <= data?.total_pages}
                                 loader={<Spinner />}
                             >
                                 {data?.data?.results?.map((item, index) => {
