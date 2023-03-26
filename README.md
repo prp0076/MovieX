@@ -60,7 +60,7 @@ To get started with the website, you will need to first clone this repository:
 Once you have cloned the repository, navigate to the project directory and install the dependencies:
 
 
- ``` cd ecommerce-reactjs  ```  
+ ``` cd MovieX  ```  
  ``` npm install ``` 
 
 
