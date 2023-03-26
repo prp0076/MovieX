@@ -19,7 +19,6 @@
 - Search functionality: Implement a search bar that allows users to search for specific content on your website, such as articles or other user profiles.
 - Modern and user-friendly design
 - Responsive layout for optimal viewing on all devices
-- Developed using HTML, CSS, and JavaScript
 
 
 
