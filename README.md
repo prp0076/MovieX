@@ -54,7 +54,7 @@
 ## Getting Started
 To get started with the website, you will need to first clone this repository:
 
- ``` git clone https://github.com/prp0076/Dstore-Ecommerce.git ``` 
+ ``` git clone https://github.com/prp0076/MovieX.git ``` 
  
  
 Once you have cloned the repository, navigate to the project directory and install the dependencies:
