@@ -11,7 +11,7 @@
 - Watchlist: A watchlist feature allows users to save movies they want to watch later. Some movie websites also provide recommendations based on the movies a user has saved to their watchlist.
 
 
-This movieX website has the designing & development following features:
+## This movieX website has the designing & development following features:
 
 - Responsive design: Ensure that your website is optimized for viewing on a variety of devices, including desktops, laptops, tablets, and smartphones.
 - Analytics: Implement an analytics system that allows you to track website traffic, user behavior, and other key metrics.
