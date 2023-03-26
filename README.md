@@ -69,7 +69,6 @@
 \---index.scss
 \---index.jsx
 
----
 ```
 ### Owner
 
