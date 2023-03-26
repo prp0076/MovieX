@@ -28,7 +28,7 @@ const [videoid , setVideoId]=useState(null)
 
     const url = useSelector((state)=>state.home);
     // genres
-    const _genres=data?.data?.genres.map((g)=>g.id);
+    const _genres=data?.data?.genres?.map((g)=>g.id);
     // console.log(_genres)
     // varible for crew and writers
     // console.log(crew)
@@ -55,7 +55,7 @@ const [videoid , setVideoId]=useState(null)
                <React.Fragment>
                 
                     <div className="backdrop-img">
-                        <Img src={url.url.backdrop +data?.data?.backdrop_path}/>
+                        <Img src={url?.url?.backdrop +data?.data?.backdrop_path}/>
                     </div>
                     <div className="opacity-layer"></div>
                     <ContentWrapper>
