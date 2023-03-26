@@ -40,7 +40,7 @@ const Explore = () => {
         setLoading(true);
         fetchDataFromApi(`/discover/${mediaType}`, filters).then((res) => {
           console.log(res);
-            setData(res);
+            setData(res?.data);
             setPageNum((prev) => prev + 1);
             setLoading(false);
         });
@@ -53,11 +53,10 @@ const Explore = () => {
         ).then((res) => {
             if (data?.results) {
                 setData({
-                    ...data,
-                    results: [...data?.results, ...res.results],
+                  ...data, results:[...data?.results,res?.data?.results]
                 });
             } else {
-                setData(res);
+                setData(res?.data);
             }
             setPageNum((prev) => prev + 1);
         });
@@ -134,7 +133,7 @@ const Explore = () => {
                 </div>
                 {loading && <Spinner initial={true} />}
                 {!loading && (
-                    <>
+                    <>  
                         {data?.data?.results?.length > 0 ? (
                             <InfiniteScroll
                                 className="content"
