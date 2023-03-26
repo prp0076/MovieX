@@ -32,15 +32,15 @@ const VideosSection = ({ data, loading }) => {
                         {data?.map((video)=>{
                             
                             
-                            <div key={video.id} className="videoItem" onClick={()=>{setVideoId(video.key); setShow(true); }}>
+                            <div key={video?.id} className="videoItem" onClick={()=>{setVideoId(video?.key); setShow(true); }}>
                                  {/* {console.log(video.id,video.key)} */}
                                 <div className="videoThumbnail">
                                     
-                                    <Img src={`https://i.ytimg.com/vi/${video.key}/hqdefault.jpg`}/>
+                                    <Img src={`https://i.ytimg.com/vi/${video?.key}/hqdefault.jpg`}/>
                                     <PlayIcon/>
                                 </div>    
                                 <div className="videotitle">
-                                    {video.name}
+                                    {video?.name}
                                 </div>
                             </div>
                         })}
