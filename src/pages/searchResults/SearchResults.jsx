@@ -48,9 +48,9 @@ const SearchResults = () => {
           {data?.results?.length >0 ? (
             <>
             <div className="pageTitle">
-              {`Search ${data.total_results >1 ? "results" : "result"} of ${query}`}
+              {`Search ${data?.total_results >1 ? "results" : "result"} of ${query}`}
             </div>
-            <InfiniteScroll className='content' dataLength={data?.results.length || []} next={fetchNextPageData} hasMore={pagenum <= data.total_pages} loader={Spinner} >
+            <InfiniteScroll className='content' dataLength={data?.results?.length || []} next={fetchNextPageData} hasMore={pagenum <= data?.total_pages} loader={Spinner} >
               {data?.results.map((item,index)=>{
                 if(item.media_type === "person") return ;
                 return (<MovieCard key={index} data={item} fromSearch={true}/>);
