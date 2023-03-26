@@ -23,7 +23,7 @@ const Details = () => {
     <div>
       <DetailsBanner video={data?.data?.results} crew={credits?.data?.crew}/>
       <Cast data={credits?.data?.cast} loading={creditsloading}/>
-      <VideosSection data={data?.data?.results} loading={loading}/>
+      {/* <VideosSection data={data?.data?.results} loading={loading}/> */}
       <Similar mediaType={mediaType} id={id} />
       <Recommendation mediaType={mediaType}  id={id}/>
     </div>
