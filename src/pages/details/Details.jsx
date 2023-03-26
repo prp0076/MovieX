@@ -11,13 +11,13 @@ import Recommendation from './caraousels/Recommadation'
 const Details = () => {
   
   const {mediaType,id}=useParams();
-  console.log(mediaType,id);
+  // console.log(mediaType,id);
   const {data,loading}=useFetch(`/${mediaType}/${id}/videos`)
   const {data:credits,loading:creditsloading}=useFetch(`/${mediaType}/${id}/credits`)
   // console.log(data?.data?.results)
   // console.log(credits?.data?.cast)
   // console.log(loading)
-  console.log(data);
+  // console.log(data);
 
   return (
     <div>

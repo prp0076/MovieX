@@ -62,6 +62,8 @@ const [videoid , setVideoId]=useState(null)
                         <div className="content">
                             <div className="left">
                                 {data?.data?.poster_path?(
+                                    console.log(url?.url?.backdrop),
+                                    console.log(data?.data?.poster_path),
                                     <Img className="posterImg" src={url?.url?.backdrop + data?.data?.poster_path}/>
                                 ):(
                                     <Img className="posterImg" src={PosterFallback}/>
