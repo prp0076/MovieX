@@ -52,9 +52,11 @@ const Explore = () => {
             filters
         ).then((res) => {
           // {console.log(res)}
+          {console.log(data?.results);
+        console.log(res?.data)}
             if (data?.results) {
                 setData({
-                  ...data, results:[...data?.results,res?.data?.results]
+                  ...data, results:[...data?.results,...res?.data?.results]
                 });
             } else {
                 setData(res?.data);
