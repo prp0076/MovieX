@@ -64,7 +64,7 @@ const [videoid , setVideoId]=useState(null)
                                 {data?.data?.poster_path?(
                                     console.log(url?.url?.backdrop),
                                     console.log(data?.data?.poster_path),
-                                    <Img className="posterImg" src={url?.url?.backdrop + data?.data?.poster_path}/>
+                                    <Img className="posterImg" src={url?.url?.backdrop +data?.data?.poster_path}/>
                                 ):(
                                     <Img className="posterImg" src={PosterFallback}/>
 
@@ -80,7 +80,7 @@ const [videoid , setVideoId]=useState(null)
                                 <Genres data={_genres}/>
                                 {/* rating and playbutton */}
                                 <div className="row">
-                                    <CircleRating rating={data?.data?.vote_average.toFixed(1)}/>
+                                    <CircleRating rating={data?.data?.vote_average?.toFixed(1)}/>
                                     {/* playbtn */}
                                     
                                     <div className="playbtn" onClick={()=>{
