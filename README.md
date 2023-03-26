@@ -30,6 +30,45 @@
 - React Redux
 - React Router Dom
 
+### Folder Structure
+
++---public
++---src
+|   \---assests
+|       \---avatar
+|       \---movieX-logo
+|       \---no-poster
+|       \---no-results
+|   \---components
+|       \---carousel
+|       \---circlerating
+|       \---contentwrapper
+|       \---footer
+|       \---genres
+|       \---header
+|       \---lazyloadimage
+|       \---moviecard
+|       \---spinner
+|       \---switchtabs
+|       \---videopopup
+|   \---hooks
+|       \---useFetch
+|   \---pages
+|       \---404
+|       \---details
+|       \---explore
+|       \---home
+|       \---searchresult
+|   \---store
+|       \---homeslice
+|       \---store
+|    
+|   \---utils
+|       \---api
+\---App.jsx
+\---index.scss
+\---index.jsx
+
 
 ### Owner
 
