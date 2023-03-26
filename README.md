@@ -77,6 +77,18 @@
 
 
 ## Screenshots
+### Home
+![home page](https://user-images.githubusercontent.com/116311633/227802115-6a2eaeb6-0bcc-4a10-8db0-def54218cd01.jpeg)
+### Search
+![Search page](https://user-images.githubusercontent.com/116311633/227802126-4fd1fa16-63bb-4a17-9368-f63e6bda0994.jpeg)
+### Movie Details
+![movie Details](https://user-images.githubusercontent.com/116311633/227802122-4b687e07-dc7b-469c-8547-b0bf4e7d6a36.jpeg)
+
+### Explore Movie 
+![Explore movies](https://user-images.githubusercontent.com/116311633/227802108-975acd98-0917-4797-a7a1-4c0b104b0543.jpeg)
+
+### Explore Tv
+![Explore tv shows](https://user-images.githubusercontent.com/116311633/227802111-007a2840-d129-48da-b194-377c03d477b6.jpeg)
 
 
 
