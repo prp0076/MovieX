@@ -96,6 +96,8 @@ const Explore = () => {
         fetchInitialData();
     };
    console.log(data?.results);
+   console.log(data?.total_pages);
+   console.log(data?.results?.length);
     return (
         <div className="explorePage">
             <ContentWrapper>
