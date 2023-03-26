@@ -138,12 +138,12 @@ const Explore = () => {
                         {data?.data?.results?.length > 0 ? (
                             <InfiniteScroll
                                 className="content"
-                                dataLength={data?.results?.length || []}
+                                dataLength={data?.data?.results?.length || []}
                                 next={fetchNextPageData}
-                                hasMore={pageNum <= data?.total_pages}
+                                hasMore={pageNum <= data?.data?.total_pages}
                                 loader={<Spinner />}
                             >
-                                {data?.results?.map((item, index) => {
+                                {data?.data?.results?.map((item, index) => {
                                     if (item.media_type === "person") return;
                                     return (
                                         <MovieCard
