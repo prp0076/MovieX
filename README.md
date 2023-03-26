@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# MovieX : High-quality films for you
+ - MovieX is a dynamic and engaging movie website that provides movie enthusiasts with a wide range of movies to explore and enjoy. The website is designed to be user-friendly and easy to navigate, with a variety of features that make it simple to find the perfect movie for any occasion.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ - At "MovieX", users can browse the latest and most popular movies on the trending page, get detailed information about any movie on the details page, and search for specific movies using the search page. The website's explore page provides users with the ability to find new movies based on their interests, with a variety of genres and themes to choose from.
 
-## Available Scripts
+## Features
+- Movie information: A movie website typically provides information about movies, including title, genre, cast, plot summary, and release date.
+- Movie reviews and ratings: Many movie websites allow users to rate and review movies, providing feedback that can help others decide whether to watch a particular movie.
+- Movie trailers: A movie website may include trailers for upcoming movies or popular films that are currently in theaters.
+- Recommendations: Many movie websites provide personalized movie recommendations based on a user's viewing history or preferences.
+- Watchlist: A watchlist feature allows users to save movies they want to watch later. Some movie websites also provide recommendations based on the movies a user has saved to their watchlist.
 
-In the project directory, you can run:
 
-### `npm start`
+This movieX website has the designing & development following features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Responsive design: Ensure that your website is optimized for viewing on a variety of devices, including desktops, laptops, tablets, and smartphones.
+- Analytics: Implement an analytics system that allows you to track website traffic, user behavior, and other key metrics.
+- SEO optimization: Optimize your website for search engines so that it ranks higher in search results for relevant keywords.
+- Search functionality: Implement a search bar that allows users to search for specific content on your website, such as articles or other user profiles.
+- Modern and user-friendly design
+- Responsive layout for optimal viewing on all devices
+- Developed using HTML, CSS, and JavaScript
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### The website has been built using the following technologies:
+- HTML
+- SCSS
+- JavaScript
+- ReactJS
+- React Redux
+- React Router Dom
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Owner
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Developer: Pushpraj Paroha 
+- GitHub URL: https://github.com/prp0076
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Github generated page : [visit now]()
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### For more information please [visit website]()
 
-### Code Splitting
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Sign Up 
+![sign up page](https://user-images.githubusercontent.com/116311633/226447710-2beb870e-788f-4563-a47a-01a99fc63301.png)
 
-### Analyzing the Bundle Size
+### Login 
+![login page](https://user-images.githubusercontent.com/116311633/226447700-5e85f99f-7382-4083-89f8-4b7053f58714.png)
+### Home
+![home page](https://user-images.githubusercontent.com/116311633/226447692-6e686387-cf08-4a0f-830a-c25917a449e5.png)
+### Category 
+![choose by categories](https://user-images.githubusercontent.com/116311633/226447686-d65b376c-f0e4-46ce-b00d-ebf70e7bd05a.png)
+### Singleproduct
+![singleproduct](https://user-images.githubusercontent.com/116311633/226564552-405cf464-e8c7-45a8-a80c-f4a1f3a16a13.jpeg)
+### Search list
+![search page](https://user-images.githubusercontent.com/116311633/226447707-8f8db7de-1399-4391-bce2-e0310d089047.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Cart 
+![cart section](https://user-images.githubusercontent.com/116311633/226447678-88173b1a-40ba-4a48-97b2-758887025952.png)
 
-### Making a Progressive Web App
+### Checkout
+![payment or checkout page](https://user-images.githubusercontent.com/116311633/226447704-e7a34e05-65d4-433d-902f-0d1dff5cbaf0.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Getting Started
+To get started with the website, you will need to first clone this repository:
 
-### Deployment
+ ``` git clone https://github.com/prp0076/Dstore-Ecommerce.git ``` 
+ 
+ 
+Once you have cloned the repository, navigate to the project directory and install the dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+ ``` cd ecommerce-reactjs  ```  
+ ``` npm install ``` 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+After the dependencies have been installed, you can start the development server by running:
+
+ ``` npm start ``` 
+This will start the development server at  ``` http://localhost:3000/  ``` , allowing you to view the website in your browser.
+
+
+## Contributing
+#### We welcome contributions to this project! If you'd like to contribute, please follow these steps:
+* Fork the repository to create your own copy of the project.
+* Create a new branch in your fork to make your changes.
+* Submit a pull request from your branch to the original repository, and we'll review your changes.
+
+Thank you for checking out our project! 
+
+
+
+
+
