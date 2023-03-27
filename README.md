@@ -74,7 +74,7 @@
 
 - Developer: Pushpraj Paroha 
 - GitHub URL: https://github.com/prp0076
-
+- Github generated page : [visit now](https://thunderous-cascaron-53e154.netlify.app/)
 
 ## Screenshots
 ### Home
