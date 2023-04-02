@@ -4,7 +4,7 @@ import {SlMenu} from "react-icons/sl";
 import {VscChromeClose} from "react-icons/vsc";
 import {useNavigate,useLocation} from "react-router-dom";
 import ContentWrapper from "../contentWrapper/ContentWrapper"
-import logo from "../../assets/movieX-logo.svg";
+import logo from "../../assets/movieX-log.png"
 import "./Header.scss"
 
 const Header = () => {
