@@ -78,20 +78,23 @@
 
 ## Screenshots
 ### Home
-![home page](https://user-images.githubusercontent.com/116311633/227802115-6a2eaeb6-0bcc-4a10-8db0-def54218cd01.jpeg)
+![home](https://user-images.githubusercontent.com/116311633/229357919-8a4bf0ec-31e9-405a-b9fa-c3948e093f6d.jpeg)
+
 
 ### Search
-![Search page](https://user-images.githubusercontent.com/116311633/227802564-8a4a1f6a-0fdb-426f-8398-2f74c7d9c836.jpeg)
+![search](https://user-images.githubusercontent.com/116311633/229357932-55146607-2cbb-4f8f-ab3c-d6a297ccab60.jpeg)
+
 
 ### Movie Details
-![movie Details](https://user-images.githubusercontent.com/116311633/227802122-4b687e07-dc7b-469c-8547-b0bf4e7d6a36.jpeg)
+![search](https://user-images.githubusercontent.com/116311633/229357952-369ac65a-1cd1-4fb1-921e-ae47be94a0e7.jpeg)
+
 
 ### Explore Movie 
-![Explore movies](https://user-images.githubusercontent.com/116311633/227802587-bac38616-b04d-433b-9307-64440b774d4a.jpeg)
+![explore movies](https://user-images.githubusercontent.com/116311633/229357963-d4d405a7-2800-4fda-a751-9ee2f7feaab6.jpeg)
 
 
 ### Explore Tv
-![Explore tv shows](https://user-images.githubusercontent.com/116311633/227802603-dc0b6699-69ad-4903-be6c-b71f99eef675.jpeg)
+![explore tv](https://user-images.githubusercontent.com/116311633/229357977-61175b93-cf11-4d0b-90fb-3d78ac9bedf9.jpeg)
 
 
 
