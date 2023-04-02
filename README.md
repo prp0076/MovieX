@@ -74,7 +74,7 @@
 
 - Developer: Pushpraj Paroha 
 - GitHub URL: https://github.com/prp0076
-- Hosted on netlify : [visit now](https://moviex-cascaron-53e154.netlify.app/)
+- Hosted on netlify : [visit now](https://moviex-hamster-61d783.netlify.app/)
 
 ## Screenshots
 ### Home
