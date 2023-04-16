@@ -98,7 +98,7 @@
 
 
 
-### For more information please [visit website](https://thunderous-cascaron-53e154.netlify.app/)
+### For more information please [visit website](https://moviex-hamster-61d783.netlify.app/)
 
 ## Getting Started
 To get started with the website, you will need to first clone this repository:
